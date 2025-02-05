@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[margin=1.0in]{geometry} % To set margins
+\usepackage{amsmath}  % This allows me to use the align functionality.
+                      % If you find yourself trying to replicate
+                      % something you found online, ensure you're
+                      % loading the necessary packages!
+\usepackage{amsfonts} % Math font
+\usepackage{fancyvrb}
+\usepackage{hyperref} % For including hyperlinks
+\usepackage[shortlabels]{enumitem}% For enumerated lists with labels specified
+                                  % We had to run tlmgr_install("enumitem") in R
+\usepackage{float}    % For telling R where to put a table/figure
+\usepackage{natbib}        %For the bibliography
+\bibliographystyle{apalike}%For the bibliography
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item This week's Problem of the Week in Math is described as follows:
+\begin{quotation}
+  \textit{There are thirty positive integers less than 100 that share a certain 
+  property. Your friend, Blake, wrote them down in the table to the left. But 
+  Blake made a mistake! One of the numbers listed is wrong and should be replaced 
+  with another. Which number is incorrect, what should it be replaced with, and 
+  why?}
+\end{quotation}
+The numbers are listed below.
+\begin{center}
+  \begin{tabular}{ccccc}
+    6 & 10 & 14 & 15 & 21\\
+    22 & 26 & 33 & 34 & 35\\
+    38 & 39 & 46 & 51 & 55\\
+    57 & 58 & 62 & 65 & 69\\
+    75 & 77 & 82 & 85 & 86\\
+    87 & 91 & 93 & 94 & 95
+  \end{tabular}
+\end{center}
+Use the fact that the ``certain'' property is that these numbers are all supposed
+to be the product of \emph{unique} prime numbers to find and fix the mistake that
+Blake made.\\
+\textbf{Reminder:} Code your solution in an \texttt{R} script and copy it over
+to this \texttt{.Rnw} file.\\
+\textbf{Hint:} You may find the \verb|%in%| operator and the \verb|setdiff()| function to be helpful.\\
+
+\textbf{Solution:} 
+% Write your answer and explanations here.
+
+<<size="scriptsize", warning=F, message=F>>=
+# Copy your solution code here.
+@
+\end{enumerate}
+
+\bibliography{bibliography}
+\end{document}
