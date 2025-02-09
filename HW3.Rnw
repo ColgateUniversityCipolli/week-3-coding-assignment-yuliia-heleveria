@@ -114,7 +114,7 @@ for (i in 1:length(valid.not.included.nums)){
 #replace the wrong number with the correct one
 provided.nums[wrong.index] = current.to.replace
 @
-The wrong number was \Sexpr{wrong.num} and it was replaced with \Sexpr{current.to.replace}.
+The wrong number was \Sexpr{wrong.num} and it was replaced with \Sexpr{current.to.replace}. \Sexpr{current.to.replace} in larger than the number that came before \Sexpr{wrong.num} (which is \Sexpr{prev.before.wrong}) and it is smaller than the number that came after \Sexpr{wrong.num} (which is \Sexpr{next.after.wrong}). Moreover, \Sexpr{current.to.replace} is a product of unique prime numbers.
 
 Correct list of numbers: \Sexpr{provided.nums}.
 \end{enumerate}
