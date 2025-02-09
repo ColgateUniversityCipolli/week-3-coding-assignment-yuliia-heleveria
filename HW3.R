@@ -38,3 +38,26 @@ wrong.num <- setdiff(provided.nums, valid.nums)
 
 #get index of the wrong number
 wrong.index <- which(provided.nums==wrong.num)
+#get the number after wrong 
+next.index <- wrong.index+1
+next.after.wrong = 0
+if (next.index <= length(provided.nums)){ #check bounds
+  next.after.wrong = provided.nums[next.index]
+} else {
+  next.after.wrong = 99
+}
+#get the number before wrong
+previous.index <- wrong.index-1
+prev.before.wrong = 0
+if (previous.index >= 0){
+  prev.before.wrong = provided.nums[previous.index]
+}
+current.to.replace = 0 #placeholder for the number that will replace the wrong one
+#replace the wrong number with a valid product if unique prime number
+for (i in 1:length(valid.not.included.nums)){
+  #iterate the valid numbers until we find the one in bounds of previous and next
+  if (valid.not.included.nums[i] > prev.before.wrong && valid.not.included.nums[i] < next.after.wrong){
+    current.to.replace = valid.not.included.nums[i]
+  }
+}
+provided.nums[wrong.index] = current.to.replace
