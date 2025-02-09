@@ -16,6 +16,9 @@ provided.nums <- c(6, 10, 14, 15, 21,
 get_valid_numbers <- function(num){
   factors <- primeFactors(num) #get prmime factors of the num
   unique.factors <- unique(factors) #get unique factors
+  if (length(unique.factors) ==1){ #if the number contains only 1 prime
+    return(FALSE)
+  }
   return(length(factors) == length(unique.factors))
 }
 
@@ -27,5 +30,11 @@ for (i in 1:length(num.to.check)){
   if (get_valid_numbers(num.to.check[i])){
     valid.nums <- c(valid.nums, num.to.check[i])
   }
-  
 }
+#numbers that are valid but not in provided list
+valid.not.included.nums <- setdiff(valid.nums, provided.nums)
+#numbers that are in provided list but not valid
+wrong.num <- setdiff(provided.nums, valid.nums)
+
+#get index of the wrong number
+wrong.index <- which(provided.nums==wrong.num)
