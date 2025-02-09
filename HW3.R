@@ -40,16 +40,14 @@ wrong.num <- setdiff(provided.nums, valid.nums)
 wrong.index <- which(provided.nums==wrong.num)
 #get the number after wrong 
 next.index <- wrong.index+1
-next.after.wrong = 0
+next.after.wrong = 99
 if (next.index <= length(provided.nums)){ #check bounds
   next.after.wrong = provided.nums[next.index]
-} else {
-  next.after.wrong = 99
 }
 #get the number before wrong
 previous.index <- wrong.index-1
-prev.before.wrong = 0
-if (previous.index >= 0){
+prev.before.wrong = 1
+if (previous.index > 0){
   prev.before.wrong = provided.nums[previous.index]
 }
 current.to.replace = 0 #placeholder for the number that will replace the wrong one
@@ -60,4 +58,5 @@ for (i in 1:length(valid.not.included.nums)){
     current.to.replace = valid.not.included.nums[i]
   }
 }
+#replace the wrong number with the correct one
 provided.nums[wrong.index] = current.to.replace
